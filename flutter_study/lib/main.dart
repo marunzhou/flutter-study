@@ -6,6 +6,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    const String title = 'dddd';
     return MaterialApp(
       title: 'Flutter Demo1223',
       theme: ThemeData(
@@ -20,7 +21,12 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: new Scaffold(
+        appBar: AppBar(
+          title: Text(title)
+        ),
+        body: MyHomePage(title: 'Flutter Demo Home Page'),
+      ),
     );
   }
 }
@@ -107,5 +113,26 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
+  }
+}
+
+
+class MyCatalog extends StatefulWidget{
+  final List catalog = [
+    {
+      
+    }
+  ];
+
+  @override
+  _MyCatalogState createState() => _MyCatalogState();
+}
+
+class _MyCatalogState extends State<MyCatalog> {
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return null;
   }
 }
